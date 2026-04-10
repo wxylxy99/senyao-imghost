@@ -15,7 +15,7 @@ import './ResourceCenter.css'
 export function ResourceCenter() {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null)
   const [category, setCategory] = useState<FileCategory>('all')
-  const [linkFormat, setLinkFormat] = useState<LinkFormat>('markdown')
+  const [linkFormat, setLinkFormat] = useState<LinkFormat>('url')
   const { upload, isUploading, progress } = useUpload()
   const { files, loading, removeFile, refresh } = useFiles(category)
   const { toasts, addToast, removeToast } = useToast()

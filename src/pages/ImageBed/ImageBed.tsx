@@ -13,7 +13,7 @@ import './ImageBed.css'
 
 export function ImageBed() {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null)
-  const [linkFormat, setLinkFormat] = useState<LinkFormat>('markdown')
+  const [linkFormat, setLinkFormat] = useState<LinkFormat>('url')
   const { upload, isUploading, progress } = useUpload()
   const { files, loading, removeFile, refresh } = useFiles('images')
   const { toasts, addToast, removeToast } = useToast()
