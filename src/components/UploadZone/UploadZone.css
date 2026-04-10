@@ -1,0 +1,118 @@
+.upload-zone {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.upload-zone.drag-over {
+  border-style: solid;
+  border-color: var(--accent);
+  background: var(--accent-light);
+  transform: scale(1.01);
+}
+
+.upload-zone.uploading {
+  pointer-events: none;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light);
+  border-radius: 50%;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover .upload-icon {
+  transform: scale(1.1);
+}
+
+.upload-zone h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.upload-zone p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.upload-formats {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Progress */
+.upload-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.progress-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.progress-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 3;
+}
+
+.progress-fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.15s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.upload-progress p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

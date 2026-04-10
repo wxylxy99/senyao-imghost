@@ -1,0 +1,23 @@
+.layout {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 24px;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+  box-sizing: border-box;
+}
+
+.layout.sidebar-collapsed .main-content {
+  margin-left: var(--sidebar-collapsed);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}

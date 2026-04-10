@@ -1,0 +1,1 @@
+export { ImageBed } from './ImageBed'

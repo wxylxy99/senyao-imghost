@@ -1,0 +1,121 @@
+.image-bed {
+  width: 100%;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.link-format-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.link-format-selector span {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.format-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-primary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.format-tab {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.format-tab:hover {
+  color: var(--text-primary);
+}
+
+.format-tab.active {
+  background: var(--bg-secondary);
+  color: var(--accent);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 24px;
+}
+
+.gallery-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.gallery-count {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  animation: fadeInUp 0.4s ease-out both;
+  display: flex;
+}
+
+.gallery-item > * {
+  flex: 1;
+}
+
+.skeleton-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.skeleton-image {
+  height: 180px;
+  background: linear-gradient(90deg, var(--bg-primary) 25%, var(--bg-secondary) 50%, var(--bg-primary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state svg {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  color: var(--border);
+}
+
+.empty-state h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,79 @@
+.file-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.file-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--shadow);
+}
+
+.file-card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.file-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-card-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.file-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.file-card-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.file-card:hover .file-card-actions {
+  opacity: 1;
+}
+
+.file-action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.file-action-btn:hover {
+  background: var(--bg-hover);
+  color: var(--accent);
+}
+
+.file-action-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}

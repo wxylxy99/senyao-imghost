@@ -1,0 +1,11 @@
+name = "senyao-system"
+main = "worker/index.ts"
+compatibility_date = "2024-01-01"
+account_id = "56ba57ff70f15e9f467357b96f663595"
+
+[[r2_buckets]]
+binding = "IMG_BUCKET"
+bucket_name = "senyao"
+
+[env.production]
+name = "senyao-system"
